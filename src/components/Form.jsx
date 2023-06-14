@@ -7,7 +7,7 @@ const Form = ({todo,setTodo}) => {
 
   // 할일 추가 버튼 클릭
   const clickAddBtnHandler = (e) => {
-    // 고유id 값으로 1970년 1월 1일 부터 지금까지의 밀리초 사용
+    // id 고유값으로 1970년 1월 1일 부터 지금까지의 밀리초 사용
     let today = Date.now();
     e.preventDefault();
     const newTodo = {
@@ -30,6 +30,7 @@ const Form = ({todo,setTodo}) => {
   };
 
   return (
+    //form 태그 내용(input, button)
     <form className="form-tag">
       <div className="input-div">
         <label>제목: </label>

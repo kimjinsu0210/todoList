@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 function Content({ todo, setTodo }) {
   // 삭제 버튼 클릭
@@ -7,7 +7,7 @@ function Content({ todo, setTodo }) {
     setTodo(newTodo);
   };
 
-  // // isDone(true <-> false) changer
+  // isDone(true <-> false) changer
   const clickBooleanChanger = (id) => {
     const todoArr = todo.map((item) =>
       item.id === id ? { ...item, isDone: !item.isDone } : item
@@ -15,6 +15,7 @@ function Content({ todo, setTodo }) {
     setTodo(todoArr);
   };
   return (
+    // isDone 조건에 따른 todoList 작성문
     <div className="content-box">
       <h2>Working..📌</h2>
       <div className="todo-list">
