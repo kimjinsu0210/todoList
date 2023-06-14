@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
+.layout{
+  max-width: 1200px;
+  min-width: 800px;
+  margin: 0 auto;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo-title{
+display: flex;
+height: 70px;
+justify-content: center;
+align-items: center;
+border: 1px solid gray;
+background-color: burlywood;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-tag{
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: 1px solid gray;
+  padding:30px;
+  justify-content: space-between;
+  border-radius: 10px;
+  background-color:chartreuse;
 }
-
-.App-link {
-  color: #61dafb;
+.form-tag label{
+  font-size: 20px;
+  font-weight: bolder;
+  margin-left: 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-tag input{
+  height: 25px;
+  border-radius: 10px;
+  border: none;
+  width: 200px;
+}
+.form-tag button{
+border: 1px solid black;
+background-color: aqua;
+width: 100px;
+height: 50px;
+border-radius: 10px;
+cursor: pointer;
+}
+.todo-list{
+  display: flex;
+  flex-wrap:wrap;
+}
+.todo-working{
+  border: 2px solid gold;
+  width: 250px;
+  height: 200px;
+  border-radius: 10px;
+  margin: 0 10px;
+}
+.todo-working button{
+  background-color: white;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.delBtn{
+  border: 1px solid red;
+  margin: 20px 10px;
+}
+.booleanChangeBtn{
+  border: 1px solid green
 }
