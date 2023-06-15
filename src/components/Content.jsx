@@ -1,9 +1,11 @@
 import React from "react";
 
 function Content({ todo, setTodo }) {
+
   // 삭제 버튼 클릭
   const clickRemoveButtonHandler = (id) => {
     const newTodo = todo.filter((todo) => todo.id !== id);
+    localStorage.setItem("todo", JSON.stringify(newTodo));
     setTodo(newTodo);
   };
 
@@ -12,10 +14,13 @@ function Content({ todo, setTodo }) {
     const todoArr = todo.map((item) =>
       item.id === id ? { ...item, isDone: !item.isDone } : item
     );
+    localStorage.setItem("todo", JSON.stringify(todoArr));
     setTodo(todoArr);
   };
+
   return (
     // isDone 조건에 따른 todoList 작성문
+    <footer>
     <div className="content-box">
       <h2>Working..📌</h2>
       <div className="todo-list">
@@ -72,6 +77,7 @@ function Content({ todo, setTodo }) {
         })}
       </div>
     </div>
+    </footer>
   );
 }
 
