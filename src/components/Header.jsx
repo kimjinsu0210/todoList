@@ -1,5 +1,3 @@
 import React from 'react';
-
-const Header = () => <div className="todo-title">My Todo List</div>
-
+const Header = () => <header><div className="todo-title">My Todo List 📝</div></header>
 export default Header;
