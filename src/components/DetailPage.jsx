@@ -7,15 +7,19 @@ const DetailPage = () => {
   const location = useLocation();
   const data = location.state;
   return (
-    <DetailBox>
-      <StyledLink to="/"><DetailBackIcon src="/home.png" alt="" /></StyledLink>
+    <>
       <DetailPinImg src="/pin.png" alt="" />
-      <div>id: {data.id}</div>
-      <div>
-        <DetailH2>{data.title}</DetailH2>
-      </div>
-      <div>{data.content}</div>
-    </DetailBox>
+      <DetailBox>
+        <StyledLink to="/">
+          <DetailBackIcon src="/home.png" alt="" />
+        </StyledLink>
+        <div>id: {data.id}</div>
+        <div>
+          <DetailH2>{data.title}</DetailH2>
+        </div>
+        <div>{data.content}</div>
+      </DetailBox>
+    </>
   );
 };
 const DetailBox = styled.div`
@@ -28,11 +32,11 @@ const DetailBox = styled.div`
   color: rgb(43, 43, 43);
   box-shadow: 0px 3px 5px 0px #000000;
   position: absolute;
-  top: 10%;
+  top: 15%;
   left: 35%;
   font-size: 1.3vw;
   gap: 20px;
-  word-break: break-all
+  word-break: break-all;
 `;
 const DetailH2 = styled.h2`
   margin: 0;
@@ -42,20 +46,21 @@ const DetailPinImg = styled.img`
   width: 100px;
   height: 100px;
   margin: 0 auto;
-  position: absolute;
-  left: 43%;
-  top: -13%;
+  position: relative;
+  left: 48%;
+  top: 100px;
+  z-index: 1;
 `;
 const StyledLink = styled(Link)`
   margin-right: 450px;
 `;
 const DetailBackIcon = styled.img`
-&:hover {
+  &:hover {
     scale: 1.15;
   }
   width: 50px;
   height: 50px;
   cursor: pointer;
   transition: scale 0.3s;
-`
+`;
 export default DetailPage;
