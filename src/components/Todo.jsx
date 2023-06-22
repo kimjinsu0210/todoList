@@ -114,6 +114,7 @@ const TodoBox = styled.div`
   padding: 10px;
   color: rgb(66, 66, 66);
   box-shadow: 0px 3px 5px 0px #000000;
+  word-break: break-all;
 `;
 const BoxDeleteButton = styled(TodoBoxButton)`
   &:hover {
@@ -142,10 +143,10 @@ const DetailImg = styled.img`
 `;
 const TodoTitle = styled.h2`
   overflow: hidden;
-  height: 27px;
+  height: 58px;
 `;
 const TodoContent = styled.p`
   overflow: hidden;
-  height: 106px;
+  height: 66px;
 `;
 export default Todo;
